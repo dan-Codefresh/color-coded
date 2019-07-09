@@ -26,13 +26,6 @@ steps:
   #     - AQUA_USERNAME=administrator
   #     - IMAGE=todaywasawesome/colorcoded
   #     - TAG=${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}
-  DeployHelmProd:
-    title: Quick Prod Install
-    image: containers101/k8sclitoolset
-    stage: Deploy
-    commands:
-#    - if [ "${{prodVersion}}" = "${{canaryVersion}}" ]; then echo "Prod version is the same as canary, nothing to do. Exiting"; exit 1; fi
-    - helm upgrade --install ${{RELEASE}} deploy/helm/colors --namespace=${{NAMESPACE}} --debug --set deployment[0].track=release --set deployment[0].image.repository=r.cfcr.io/todaywasawesome/todaywasawesome/colorcoded --set deployment[0].image.tag="${{prodImage}}" --set deployment[0].image.version="${{prodImage}}" --set deployment[0].image.pullSecret=codefresh-generated-r.cfcr.io-cfcr-${{NAMESPACE}} --set deployment[1].track=canary --set deployment[1].image.repository=r.cfcr.io/todaywasawesome/todaywasawesome/colorcoded --set deployment[1].image.tag='${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}' --set deployment[1].image.version="${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}" --set deployment[1].image.pullSecret=codefresh-generated-r.cfcr.io-cfcr-${{NAMESPACE}}
   IstioInfo:
     title: Gather Production State
     stage: Deploy
