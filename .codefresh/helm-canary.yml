@@ -26,7 +26,7 @@ steps:
   #     - AQUA_USERNAME=administrator
   #     - IMAGE=todaywasawesome/colorcoded
   #     - TAG=${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}
-  DeployHelm:
+  DeployHelmProd:
     title: Quick Prod Install
     image: containers101/k8sclitoolset
     stage: Deploy
