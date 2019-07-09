@@ -4,7 +4,7 @@ metadata:
   name: colors
 spec:
   hosts:
-  - "colors.demo4591.codefresh.io"
+  - "boing.skytv.codefresh.io"
   gateways:
   - colors
   http:
