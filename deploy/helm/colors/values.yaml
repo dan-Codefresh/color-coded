@@ -4,7 +4,7 @@
 deployment:
   - track: release
     image:
-      repository: r.cfcr.io/todaywasawesome/todaywasawesome/colorcoded
+      repository: r.cfcr.io/skynz/colorcoded
       tag: 'master'
       version: 'color'
       pullSecret: codefresh-generated-r.cfcr.io-cfcr-default
