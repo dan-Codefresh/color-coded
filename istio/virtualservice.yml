@@ -9,7 +9,7 @@ spec:
   gateways:
   - colors
   hosts:
-  - colors.demo4591.codefresh.io
+  - boing.skytv.codefresh.io
   http:
   - route:
     - destination:
