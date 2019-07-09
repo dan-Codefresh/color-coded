@@ -27,5 +27,5 @@ service:
   internalPort: 8080
 
 istio:
-  host: ae8abd6f99e0611e9802a06a9ed4785d-1663402401.us-west-2.elb.amazonaws.com
+  host: boing.skytv.codefresh.io
   namespace: color
