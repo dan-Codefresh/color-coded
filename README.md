@@ -2,7 +2,7 @@
 
 <img src="https://codefresh.io/wp-content/uploads/2018/06/Color-coded.svg" width="200px">
 
-## What's in the aapp?
+## What's in the app?
 A simple go app that displays a color and dies when you navigate to /die. The whole thing is packaged as a Helm chart and includes a Codefresh pipeline, and Istio configuration. 
 
 You can watch a <a href="https://codefresh.io/canary_helm_lp/">full demo here</a>.
